@@ -1,0 +1,154 @@
+
+.first{
+    margin-left: 50px;
+    padding-top: 30px;
+    margin-left: 70px;
+}
+.first p{
+    font-size: 30px;
+    font-style: italic;
+    font-family: unset;
+}
+.first h3{
+    font-size: 35px;
+    margin-top: -20px;
+}
+.business{
+    background-color: rgb(235, 234, 234);
+    width: 1264px;
+    height: 700px;
+}
+.check{
+    width: 600px;
+    float: left;
+    margin-left: 70px;
+    font-family: sans-serif;
+    
+}
+.check h1, .payroll h1{
+    color: rgb(197, 5, 5);
+    font-size: 23px;
+    margin-top: 20px;
+    
+}
+.check h2, .payroll h2{
+    font-size: 16px;
+   
+}
+.check h3{
+    font-size: 15px;
+    font-style: italic;
+    
+}
+.check p{
+    font-size: 17px;
+    margin-top: -9px;
+
+}
+.check ul li {
+    list-style: disc;
+    margin: 10px;
+    margin-left: -2px;
+    margin-top: -7px;
+}
+.one li{
+    font-weight: bold;
+    font-style: italic;
+}
+.more{
+    float: right;
+    width: 400px;
+}
+.more img{
+    height: 550px;
+    width: 450px;
+    margin-left: -100px;
+    
+}
+.connect{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.connect a img{
+    margin-left: 200px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 3px 3px rgb(153, 151, 151);
+}
+.book img{
+    height: 550px;
+    width: 450px;
+    margin-left: 100px;
+    margin-top: 35px;
+}
+.office{
+    float: left;
+    width: 400px;
+}
+.office img{
+    height: 550px;
+    width: 450px;
+    margin-left: 50px;
+    margin-top: 70px;
+    
+}
+.payroll{
+     width: 700px;
+    float: right;
+    margin-left: 70px;
+    font-family: sans-serif;
+    height: 700px;
+}
+.payroll ul li {
+    list-style: disc;
+    margin: 10px;
+    margin-left: -20px;
+    
+}
+.start{
+    background-color: black;
+    height: 50px;
+    margin-top: -16px;
+
+}
+.start ul li{
+    display: inline-block;
+    text-decoration: none;
+    color: brown;
+}
+.work li{
+    border: none;
+}
+.most{
+    margin-top: 70px;
+}
+.most a img{
+    height: 35px;
+    width: 350px;
+    margin-left: 458px;
+}
+.comp{
+    text-align: center;
+
+}
+.comp a{
+    text-decoration: none;
+    color: black;
+
+}
+.comp ul li{
+    display: inline-block;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 7px;
+    font-size: 14px;
+    
+}
+
+
+
+
+
+
+
+
+

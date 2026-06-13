@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+
+# Sitemaps for better crawling
+Sitemap: https://biurorachunkowenysa.com/sitemap.xml
+Sitemap: https://biurorachunkowenysa.com/image-sitemap.xml
+
+# Important pages for indexing
+Allow: /Contact
+Allow: /Business
+Allow: /Book
+Allow: /expenses
+Allow: /payroll
+Allow: /tax
+Allow: /aboutus
+
+# Allow crawling of logo images for search results
+Allow: /image/mkm-logo.png
+Allow: /image/logo.svg
+Allow: /image/
+
+# Block unnecessary files
+Disallow: /vendor/
+Disallow: /PHPMailer/
+Disallow: /*.php$
+Disallow: /smtp-test.php
+Disallow: /auth-test.php
+Disallow: /mailer.php

@@ -1,0 +1,165 @@
+<!-- Language Bar
+<div id="lang-bar" class="language-selector">
+  <div class="lang-toggle">
+    <button onclick="setLanguage('en')" class="lang-btn" data-lang="en">
+      <span class="flag">🇬🇧</span>EN
+    </button>
+    <button onclick="setLanguage('pl')" class="lang-btn active" data-lang="pl">
+      <span class="flag">🇵🇱</span>PL
+    </button>
+  </div>
+   -->
+  <!-- Hidden element for Google Translate -->
+  <div id="google_translate_element" style="display:none;"></div>
+</div>
+
+<!-- Header Section -->
+<header class="modern-header">
+  <div class="header-wrapper">
+    <div class="header-content">
+      <!-- Logo Section -->
+      <div class="logo-section">
+        <a href="./" class="logo-link">
+          <div class="logo-icon">
+            <img src="image/mkm-logo.png" alt="MKM Logo" width="60" height="60" style="border-radius: 12px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+              <rect width="60" height="60" rx="12" fill="#b10a21"/>
+              <text x="30" y="40" text-anchor="middle" fill="white" font-family="Arial" font-weight="bold" font-size="24">M</text>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <h5 class="company-name" style="font-size: 1.0rem; margin-bottom: 0.2rem;">MKM</h5>
+            <p class="company-tagline" style="font-size: 0.75rem; margin: 0;">Biuro Rachunkowe</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-navigation">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="./" class="nav-link">
+              
+              <span class="nav-text">Strona Główna</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="aboutus" class="nav-link">
+              <span class="nav-text">O Nas</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-trigger">
+              <span class="nav-text">Usługi</span>
+              <span class="dropdown-arrow">
+                <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                  <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-content">
+                <a href="Business" class="dropdown-item">
+                  <div class="item-content">
+                    <span class="item-title">Rejestracja Działalności</span>
+                    <span class="item-desc">Kompleksowe usługi zakładania firm</span>
+                  </div>
+                </a>
+                <a href="expenses" class="dropdown-item">
+                  <div class="item-content">
+                    <span class="item-title">Księga Podatkowa</span>
+                    <span class="item-desc">Ewidencja przychodów i kosztów</span>
+                  </div>
+                </a>
+                <a href="Book" class="dropdown-item">
+                  <div class="item-content">
+                    <span class="item-title">Księga Handlowa</span>
+                    <span class="item-desc">Profesjonalna księgowość</span>
+                  </div>
+                </a>
+                <a href="tax" class="dropdown-item">
+                  <div class="item-content">
+                    <span class="item-title">Ryczałt od Przychodów</span>
+                    <span class="item-desc">Uproszczone rozliczenia podatkowe</span>
+                  </div>
+                </a>
+                <a href="payroll" class="dropdown-item">
+                  <div class="item-content">
+                    <span class="item-title">Kadry i Płace</span>
+                    <span class="item-desc">Zarządzanie zasobami ludzkimi</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="Contact" class="nav-link">
+              <span class="nav-text">Kontakt</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Contact Info & CTA -->
+      <div class="header-actions">
+        <div class="contact-info">
+          <a href="tel:+48664767930" class="phone-link">
+            <span class="phone-icon">📞+48 664 767 930</span>
+           </a>
+        </div>
+        
+      </div>
+
+      <!-- Mobile Hamburger Menu -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" onclick="window.openMobileMenu && window.openMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Menu -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <nav class="mobile-nav" id="mobileNav">
+     
+      <ul class="mobile-nav-menu">
+        <li class="mobile-nav-item">
+          <a href="./" class="mobile-nav-link">
+            <span class="mobile-nav-text">Strona Główna</span>
+          </a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="aboutus" class="mobile-nav-link">
+            <span class="mobile-nav-text">O Nas</span>
+          </a>
+        </li>
+        <li class="mobile-nav-item mobile-dropdown">
+          <button class="mobile-nav-toggle" id="mobileServicesBtn">
+            <span class="mobile-nav-text">Usługi</span>
+            <span class="mobile-dropdown-arrow">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
+          <ul class="mobile-dropdown-content" id="mobileServicesList">
+            <li><a href="Business" class="mobile-sub-link">Rejestracja Działalności</a></li>
+            <li><a href="expenses" class="mobile-sub-link">Księga Podatkowa</a></li>
+            <li><a href="Book" class="mobile-sub-link">Księga Handlowa</a></li>
+            <li><a href="tax" class="mobile-sub-link">Ryczałt od Przychodów</a></li>
+            <li><a href="payroll" class="mobile-sub-link">Kadry i Płace</a></li>
+          </ul>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="Contact" class="mobile-nav-link">
+            <span class="mobile-nav-text">Kontakt</span>
+          </a>
+        </li>
+      </ul>
+      <div class="mobile-nav-footer">
+        <a href="tel:+48664767930" class="mobile-phone-btn">📞 Zadzwoń: +48 664 767 930</a>
+      </div>
+    </nav>
+  </div>
+</header>

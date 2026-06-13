@@ -1,0 +1,57 @@
+# MKM Biuro Rachunkowe - Minimal .htaccess Configuration
+# Use this if the main .htaccess causes redirect loops
+
+# Enable URL Rewriting
+RewriteEngine On
+
+# Basic Security
+<Files ".htaccess">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Prevent directory browsing
+Options -Indexes
+
+# Redirect index.php to clean root URL  
+RewriteCond %{THE_REQUEST} \s/+(.*)index\.php[\s?] [NC]
+RewriteRule ^index\.php$ /%1 [R=301,L]
+
+# Remove trailing slash from non-directory URLs (prevent duplicates)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [R=301,L]
+
+# Clean URLs without redirects (to prevent loops)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^.]+)$ $1.php [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^.]+)$ $1.html [NC,L]
+
+# Home page
+RewriteRule ^$ index.php [L]
+
+# Basic Security Headers (if supported)
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set X-Frame-Options SAMEORIGIN
+</IfModule>
+
+# Error Pages
+ErrorDocument 404 /404.html
+ErrorDocument 403 /403.html
+ErrorDocument 500 /500.html
+
+# Protect mailer.php from direct GET access
+<Files "mailer.php">
+    <Limit GET>
+        Order deny,allow
+        Deny from all
+    </Limit>
+</Files>

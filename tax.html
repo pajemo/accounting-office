@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usługi Podatkowe - Biuro Rachunkowe MKM</title>
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://biurorachunkowenysa.com/tax" />
+    
+    <!-- Organization Schema with Logo for Google Search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "MKM Biuro Rachunkowe",
+      "url": "https://biurorachunkowenysa.com",
+      "logo": "https://biurorachunkowenysa.com/image/mkm-logo.png",
+      "image": "https://biurorachunkowenysa.com/image/mkm-logo.png",
+      "description": "Profesjonalne usługi podatkowe i ryczałt w Nysie - MKM Biuro Rachunkowe",
+      "telephone": "+48664767930",
+      "email": "malgorzatakrzyzowska@wp.pl",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ul. Grunwaldzka 1",
+        "addressLocality": "Nysa",
+        "addressRegion": "Opolskie",
+        "postalCode": "48-300",
+        "addressCountry": "PL"
+      }
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="image/favicon.png?v=1">
+    
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mobile-responsive.css">
+    <link rel="stylesheet" href="modern-header.css">
+    
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <!-- Page Specific Styles -->
+    <style>
+    /* Global Layout */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .page-wrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Hero Banner */
+    .hero-banner {
+        background: linear-gradient(135deg, #b10a21 0%, #d41439 100%);
+        color: white;
+        padding: 60px 20px 50px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .hero-banner::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M 8 0 L 0 0 0 8" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+        opacity: 0.4;
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    
+    .hero-badge {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 8px 20px;
+        border-radius: 25px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+        backdrop-filter: blur(10px);
+    }
+    
+    .hero-title {
+        font-size: 2.4rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        line-height: 1.1;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+        font-weight: 400;
+        opacity: 0.95;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.15);
+        color: white;
+        padding: 12px 24px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .hero-cta:hover {
+        background: rgba(255, 255, 255, 0.25);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    
+    /* Main Content */
+    .main-content {
+        flex: 1;
+        background: #f8f9fa;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    /* Services Overview */
+    .services-overview {
+        padding: 50px 0;
+        background: white;
+    }
+    
+    .section-header {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto 40px;
+    }
+    
+    .section-badge {
+        display: inline-block;
+        background: rgba(177, 10, 33, 0.1);
+        color: #b10a21;
+        padding: 8px 20px;
+        border-radius: 25px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: #333;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+    }
+    
+    .section-description {
+        font-size: 1rem;
+        color: #666;
+        line-height: 1.6;
+    }
+    
+    /* Service Categories Grid */
+    .services-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+    
+    .service-card {
+        background: white;
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(177, 10, 33, 0.1);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .service-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #b10a21, #d41439);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .service-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 40px rgba(177, 10, 33, 0.15);
+    }
+    
+    .service-card:hover::before {
+        opacity: 1;
+    }
+    
+    .service-header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .service-icon {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, rgba(177, 10, 33, 0.1), rgba(212, 20, 57, 0.1));
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+    }
+    
+    .service-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #333;
+        margin: 0;
+    }
+    
+    .service-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .service-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 8px 0;
+        color: #555;
+        line-height: 1.5;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .service-list li:last-child {
+        border-bottom: none;
+    }
+    
+    .service-check {
+        width: 20px;
+        height: 20px;
+        background: rgba(177, 10, 33, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #b10a21;
+        font-weight: bold;
+        font-size: 11px;
+        flex-shrink: 0;
+        margin-top: 2px;
+    }
+    
+    /* Featured Service */
+    .featured-service {
+        background: linear-gradient(135deg, #b10a21, #d41439);
+        color: white;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .featured-service::before {
+        display: none;
+    }
+    
+    .featured-service .service-icon {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+    }
+    
+    .featured-service .service-title {
+        color: white;
+    }
+    
+    .featured-service .service-list li {
+        color: rgba(255, 255, 255, 0.9);
+        border-bottom-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    .featured-service .service-check {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+    }
+    
+    /* Why Choose Us Section */
+    .why-choose-us {
+        padding: 50px 0;
+        background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    }
+    
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        margin-top: 25px;
+    }
+    
+    .benefit-card {
+        background: white;
+        padding: 20px 15px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+    }
+    
+    .benefit-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+    
+    .benefit-icon {
+        width: 45px;
+        height: 45px;
+        background: linear-gradient(135deg, #b10a21, #d41439);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        color: white;
+        margin: 0 auto 12px;
+    }
+    
+    .benefit-title {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 8px;
+    }
+    
+    .benefit-description {
+        color: #666;
+        line-height: 1.5;
+        font-size: 0.9rem;
+    }
+    
+    /* CTA Section */
+    .cta-section {
+        background: linear-gradient(135deg, #b10a21, #d41439);
+        color: white;
+        padding: 50px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .cta-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+        opacity: 0.3;
+    }
+    
+    .cta-content {
+        position: relative;
+        z-index: 2;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .cta-title {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 0.8rem;
+        line-height: 1.2;
+    }
+    
+    .cta-description {
+        font-size: 1rem;
+        opacity: 0.95;
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+    }
+    
+    .cta-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: white;
+        color: #b10a21;
+        padding: 14px 28px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+    
+    .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        color: #b10a21;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .hero-banner {
+            padding: 50px 20px 40px;
+        }
+        
+        .hero-title {
+            font-size: 2rem;
+        }
+        
+        .hero-subtitle {
+            font-size: 1rem;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+        }
+        
+        .services-overview {
+            padding: 40px 0;
+        }
+        
+        .service-card {
+            padding: 20px;
+        }
+        
+        .service-header {
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+        }
+        
+        .why-choose-us {
+            padding: 40px 0;
+        }
+        
+        .cta-section {
+            padding: 40px 0;
+        }
+        
+        .cta-title {
+            font-size: 1.6rem;
+        }
+    }
+    
+    @media (min-width: 769px) {
+        .services-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .container {
+            padding: 0 40px;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .hero-banner {
+            padding: 80px 40px 70px;
+        }
+        
+        .services-overview {
+            padding: 70px 0;
+        }
+        
+        .why-choose-us {
+            padding: 70px 0;
+        }
+        
+        .cta-section {
+            padding: 70px 0;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <script>
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                });
+        </script>
+        <div id="header-placeholder"></div>
+
+        <!-- Hero Banner -->
+        <section class="hero-banner">
+            <div class="hero-content">
+                <span class="hero-badge">Rozwiązania Podatkowe</span>
+                <h1 class="hero-title">Kompleksowe Usługi Podatkowe</h1>
+                <p class="hero-subtitle">Eksperckie przygotowywanie deklaracji, planowanie podatkowe i usługi zgodności dla osób prywatnych i firm</p>
+                <a href="#services" class="hero-cta">
+                    <i class="fas fa-arrow-down"></i>
+                    Poznaj Usługi Podatkowe
+                </a>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Services Overview -->
+            <section id="services" class="services-overview">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-badge">Nasza Ekspertyza</span>
+                        <h2 class="section-title">Profesjonalne Usługi Podatkowe</h2>
+                        <p class="section-description">Biuro Rachunkowe MKM zapewnia kompleksowe usługi podatkowe zaprojektowane w celu minimalizacji zobowiązań podatkowych przy jednoczesnym zapewnieniu pełnej zgodności z polskimi przepisami podatkowymi.</p>
+                    </div>
+
+                    <div class="services-grid">
+                        <!-- Individual Tax Returns -->
+                        <div class="service-card">
+                            <div class="service-header">
+                                <div class="service-icon">👤</div>
+                                <h3 class="service-title">Rozliczenia Podatku Dochodowego</h3>
+                            </div>
+                            <ul class="service-list">
+                                <li>
+                                    <span class="service-check">✓</span>
+                                    Przygotowanie podatku dochodowego od osób fizycznych (PIT)
+                                </li>
+                                <li>
+                                    <span class="service-check">✓</span>
+                                    Składanie rocznych zeznań podatkowych (PIT-36, PIT-37)
+                                </li>
+                                <li>
+                                    <span class="service-check">✓</span>
+                                    Strategie optymalizacji podatkowej
+                                </li>
+                                <li>
+                                    <span class="service-check">✓</span>
+                                    Maksymalizacja odliczeń podatkowych
+                                </li>
+                                <li>
+                                    <span class="service-check">✓</span>
+                                    Konsultacje w zakresie planowania podatkowego
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Business Tax Services -->
+                        <div class="service-card">
+                            <div class="service-header">
+                                <div class="service-icon">🏢</div>
+                                <h3 class="service-title">Usługi Podatkowe dla Firm</h3>
+                            </div>
+                            <ul class="service-list">
+                                <li>
+                                    <span class="service-check">✓</span>
+                                    Przygotowanie podatku dochodowego od osób prawnych (CIT)
+                                </li>
+                                <li>
+                                    <span class="service-check">✓</span>
+                                    Miesięczne deklaracje VAT (VAT-7)
+                                </li>
+                                <li>
+                                    <span class="service-check">✓</span>
+                                    Kwartalne zaliczki na podatek CIT
+                                </li>
+                                <li>
+                                    <span class="service-check">✓</span>
+                                    Roczne zeznania CIT (CIT-8)
+                                </li>
+                                <li>
+                                    <span class="service-check">✓</span>
+                                    Monitoring zgodności podatkowej
+                                </li>
+                                <li>
+                                    <span class="service-check">✓</span>
+                                    Dokumentacja cen transferowych
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Flat Tax Services -->
+                        <div class="service-card featured-service">
+                            <div class="service-header">
+                                <div class="service-icon">📊</div>
+                                <h3 class="service-title">Flat-Rate Tax (Podatek Liniowy)</h3>
+                            </div>
+                            <ul class="service-list">
+                                <li>
+                                    <span class="service-check">✓</span>
+                                    19% flat tax rate optimization
+                                </li>
+                                <li>
+                                    <span class="service-check">✓</span>
+                                    Eligibility assessment and setup
+                                </li>
+                                <li>
+                                    <span class="service-check">✓</span>
+                                    Monthly advance calculations
+                                </li>
+                                <li>
+                                    <span class="service-check">✓</span>
+                                    Annual flat tax returns
+                                </li>
+                                <li>
+                                    <span class="service-check">✓</span>
+                                    Simplified tax compliance
+                                </li>
+                                <li>
+                                    <span class="service-check">✓</span>
+                                    Business expense optimization
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- VAT Services -->
+                        <div class="service-card">
+                            <div class="service-header">
+                                <div class="service-icon">💼</div>
+                                <h3 class="service-title">Usługi VAT</h3>
+                            </div>
+                            <ul class="service-list">
+                                <li>
+                                    <span class="service-check">✓</span>
+                                    Przygotowanie miesięcznych deklaracji VAT
+                                </li>
+                                <li>
+                                    <span class="service-check">✓</span>
+                                    Rejestracja i wyrejestrowanie z VAT
+                                </li>
+                                <li>
+                                    <span class="service-check">✓</span>
+                                    Zgodność z VAT UE (VAT-EU)
+                                </li>
+                                <li>
+                                    <span class="service-check">✓</span>
+                                    Wnioski o zwrot VAT
+                                </li>
+                                <li>
+                                    <span class="service-check">✓</span>
+                                    Konsultacje VAT w handlu transgranicznym
+                                </li>
+                                <li>
+                                    <span class="service-check">✓</span>
+                                    Wsparcie w kontrolach VAT
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Choose Us -->
+            <section class="why-choose-us">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-badge">Dlaczego My?</span>
+                        <h2 class="section-title">Ekspertyza Podatkowa, Której Możesz Zaufać</h2>
+                        <p class="section-description">Nasi doświadczeni specjaliści podatkowi zapewniają dokładność, zgodność i maksymalną efektywność podatkową dla wszystkich Twoich zobowiązań podatkowych.</p>
+                    </div>
+
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <div class="benefit-icon">📋</div>
+                            <h3 class="benefit-title">Dokładne Przygotowanie</h3>
+                            <p class="benefit-description">Skrupulatna dbałość o szczegóły zapewnia bezbłędne zeznania podatkowe i zgodność z przepisami.</p>
+                        </div>
+
+                        <div class="benefit-card">
+                            <div class="benefit-icon">💰</div>
+                            <h3 class="benefit-title">Optymalizacja Podatkowa</h3>
+                            <p class="benefit-description">Strategiczne planowanie minimalizujące obciążenia podatkowe w sposób legalny i skuteczny.</p>
+                        </div>
+
+                        <div class="benefit-card">
+                            <div class="benefit-icon">⏰</div>
+                            <h3 class="benefit-title">Terminowe Składanie</h3>
+                            <p class="benefit-description">Nigdy nie przegap terminu dzięki naszemu proaktywnemu zarządzaniu kalendarzem podatkowym.</p>
+                        </div>
+
+                        <div class="benefit-card">
+                            <div class="benefit-icon">🛡️</div>
+                            <h3 class="benefit-title">Wsparcie w Kontrolach</h3>
+                            <p class="benefit-description">Pełna reprezentacja i wsparcie podczas kontroli podatkowych i postępowań.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to Action -->
+            <section class="cta-section">
+                <div class="container">
+                    <div class="cta-content">
+                        <h2 class="cta-title">Gotowy na Optymalizację Podatków?</h2>
+                        <p class="cta-description">Pozwól naszym ekspertom podatkowym pomóc Ci poruszać się po polskich przepisach podatkowych i maksymalizować oszczędności.</p>
+                        <a href="Contact.html" class="cta-button">
+                            <i class="fas fa-calculator"></i>
+                            Umów Konsultację Podatkową
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: 'en', includedLanguages: 'en,pl', autoDisplay: false },
+                'google_translate_element'
+            );
+        }
+    </script>
+
+    <script type="text/javascript" 
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
+
+    <script src="mobile-navigation.js"></script>
+
+    <!-- Smooth Scrolling -->
+    <script>
+        document.querySelector('.hero-cta').addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector('#services');
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    </script>
+</body>
+</html>

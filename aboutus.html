@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Nas - Biuro Rachunkowe MKM</title>
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://biurorachunkowenysa.com/aboutus" />
+    
+    <!-- Organization Schema with Logo for Google Search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "MKM Biuro Rachunkowe",
+      "url": "https://biurorachunkowenysa.com",
+      "logo": "https://biurorachunkowenysa.com/image/mkm-logo.png",
+      "image": "https://biurorachunkowenysa.com/image/mkm-logo.png",
+      "description": "O nas - MKM Biuro Rachunkowe w Nysie, 25+ lat doświadczenia w księgowości",
+      "telephone": "+48664767930",
+      "email": "malgorzatakrzyzowska@wp.pl",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ul. Grunwaldzka 1",
+        "addressLocality": "Nysa",
+        "addressRegion": "Opolskie",
+        "postalCode": "48-300",
+        "addressCountry": "PL"
+      }
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="image/favicon.png?v=1">
+    
+    <!-- Preload critical CSS files -->
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="mobile-responsive.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="modern-header.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="about-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Fallback for browsers that don't support preload -->
+    <noscript>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="mobile-responsive.css">
+        <link rel="stylesheet" href="modern-header.css">
+        <link rel="stylesheet" href="about-styles.css">
+    </noscript>
+    
+    <!-- Critical About Page Styles - Inline for instant loading -->
+    <style>
+    /* About Page Critical Styles */
+    .about-hero {
+        height: 60vh;
+        background: linear-gradient(135deg, rgba(177, 10, 33, 0.9), rgba(212, 20, 57, 0.8)), url('image/cityscape.jpg') center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        position: relative;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+    }
+
+    .hero-stats {
+        display: flex;
+        gap: 3rem;
+        justify-content: center;
+    }
+
+    .stat-item {
+        text-align: center;
+    }
+
+    .stat-item h3 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: #ffd700;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* Critical responsive styles */
+    @media (max-width: 768px) {
+        .hero-content h1 { font-size: 2rem; }
+        .hero-stats { flex-direction: column; gap: 1rem; }
+    }
+    </style>
+    
+    <!-- Load FontAwesome asynchronously -->
+    <link rel="preconnect" href="https://ka-f.fontawesome.com">
+    <script async src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Include Header -->
+<script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-placeholder').innerHTML = data;
+    });
+</script>
+<div id="header-placeholder"></div>
+
+<!-- Hero Section -->
+<section class="about-hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>O Biurze Rachunkowym MKM</h1>
+    <p>Twój zaufany partner w sukcesie finansowym od 2000 roku</p>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <h3>25+</h3>
+        <p>Lat Doświadczenia</p>
+      </div>
+      <div class="stat-item">
+        <h3>100+</h3>
+        <p>Zadowolonych Klientów</p>
+      </div>
+      <div class="stat-item">
+        <h3>100%</h3>
+        <p>Dokładność</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Introduction -->
+<section class="about-intro">
+  <div class="container">
+    <div class="intro-content">
+      <div class="intro-text">
+        <h2>Profesjonalne Usługi Księgowe, Na Których Możesz Polegać</h2>
+        <p class="lead">Biuro Rachunkowe MKM Małgorzata Krzyżowska działa od 2000 roku, świadcząc kompleksowe usługi księgowe, podatkowe i doradcze firmom w całej Polsce.</p>
+        
+        <div class="intro-highlights">
+          <div class="highlight-item">
+            <div class="highlight-icon">🏆</div>
+            <div class="highlight-content">
+              <h4>Eksperckie Przywództwo</h4>
+              <p>Kierowane przez Małgorzatę Krzyżowską, absolwentkę Uniwersytetu Opolskiego ze studiami podyplomowymi z rachunkowości i finansów.</p>
+            </div>
+          </div>
+          
+          <div class="highlight-item">
+            <div class="highlight-icon">🛡️</div>
+            <div class="highlight-content">
+              <h4>Ubezpieczone i Bezpieczne</h4>
+              <p>Ubezpieczenie odpowiedzialności cywilnej naszego biura gwarantuje Twoje bezpieczeństwo, dając spokój ducha przy każdej transakcji.</p>
+            </div>
+          </div>
+          
+          <div class="highlight-item">
+            <div class="highlight-icon">🌍</div>
+            <div class="highlight-content">
+              <h4>Zróżnicowana Baza Klientów</h4>
+              <p>Obsługujemy spółki prawa handlowego, fundacje, stowarzyszenia i przedsiębiorców zarówno z polskim, jak i zagranicznym kapitałem.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="intro-image">
+        <img src="image/accountant1.jpg" alt="Zespół Biura Rachunkowego MKM" loading="lazy">
+        <div class="image-overlay">
+          <div class="overlay-content">
+            <h3>Zlokalizowane w Nysie</h3>
+            <p>ul. Grunwaldzka 1</p>
+            <a href="Contact.html" class="overlay-cta">Odwiedź Nasze Biuro</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Owner Biography -->
+<section class="owner-bio">
+  <div class="container">
+    <div class="bio-content">
+      <div class="bio-image">
+        <div class="image-frame">
+          <img src="image/professional-accountant.jpeg" alt="Małgorzata Krzyżowska - Właścicielka" loading="lazy">
+        </div>
+        <div class="bio-credentials">
+          <h4>Małgorzata Krzyżowska</h4>
+          <p>Założycielka i Główna Księgowa</p>
+          <div class="credentials-list">
+            <span class="credential">Absolwentka Uniwersytetu Opolskiego</span>
+            <span class="credential">Studia Podyplomowe z Rachunkowości i Finansów</span>
+            <span class="credential">Była Główna Księgowa</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bio-text">
+        <h2>Poznaj Naszą Założycielkę</h2>
+        <p>Z ponad 25-letnim doświadczeniem w branży księgowej, Małgorzata Krzyżowska wnosi niezrównaną wiedzę do każdej relacji z klientem.</p>
+        
+        <div class="experience-timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">2000</div>
+            <div class="timeline-content">
+              <h4>Założenie Biura Rachunkowego MKM</h4>
+              <p>Utworzenie biura w Nysie, rozpoczynając podróż dedykowanej obsługi lokalnych firm.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-year">Wykształcenie</div>
+            <div class="timeline-content">
+              <h4>Doskonałość Akademicka</h4>
+              <p>Ukończenie Uniwersytetu Opolskiego i studiów podyplomowych z rachunkowości i finansów.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-year">Doświadczenie</div>
+            <div class="timeline-content">
+              <h4>Przywództwo w Branży</h4>
+              <p>Pełnienie funkcji głównej księgowej w firmach handlowych i dyrektora ekonomicznego w produkcji, zdobywając kompleksowy wgląd biznesowy.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Values & Mission -->
+<section class="values-mission">
+  <div class="container">
+    <div class="section-header">
+      <h2>Nasze Wartości i Misja</h2>
+      <p>Co motywuje nas do dostarczania wyjątkowych usług księgowych każdego dnia</p>
+    </div>
+    
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">
+          <i class="fas fa-bullseye"></i>
+        </div>
+        <h3>Precyzja</h3>
+        <p>Utrzymujemy perfekcję w księgowości z zerową tolerancją dla błędów, zapewniając, że Twoje dokumenty finansowe są zawsze dokładne.</p>
+      </div>
+      
+      <div class="value-card">
+        <div class="value-icon">
+          <i class="fas fa-handshake"></i>
+        </div>
+        <h3>Partnerstwo</h3>
+        <p>Utrzymujemy intensywne zaangażowanie w sprawy klientów, budując trwałe relacje partnerskie oparte na zaufaniu i wspólnym sukcesie.</p>
+      </div>
+      
+      <div class="value-card">
+        <div class="value-icon">
+          <i class="fas fa-clock"></i>
+        </div>
+        <h3>Dostępność</h3>
+        <p>Stały kontakt z elastycznymi godzinami pracy, dostępni na spotkania poza godzinami biurowymi i w weekendy w razie potrzeby.</p>
+      </div>
+      
+      <div class="value-card">
+        <div class="value-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3>Kompleksowość</h3>
+        <p>Pełne usługi obejmujące ubezpieczenia, finanse, wnioski o dotacje, bankowość, księgowość i podatki pod jednym dachem.</p>
+      </div>
+      
+      <div class="value-card">
+        <div class="value-icon">
+          <i class="fas fa-lightbulb"></i>
+        </div>
+        <h3>Innowacyjność</h3>
+        <p>Żywe zainteresowanie sprawami biznesowymi klientów i świeże pomysły na rozwój i strategie wzrostu firmy.</p>
+      </div>
+      
+      <div class="value-card">
+        <div class="value-icon">
+          <i class="fas fa-heart"></i>
+        </div>
+        <h3>Pasja</h3>
+        <p>Nasza praca to nasza pasja, a zadowolenie klienta to nasza misja. Nie znajdziesz "niemożliwe" w naszym słowniku.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why-choose-us">
+  <div class="container">
+    <div class="choose-content">
+      <div class="choose-text">
+        <h2>Dlaczego Wybrać Biuro Rachunkowe MKM?</h2>
+        <p class="section-subtitle">Oto czego nauczyły nas ponad dwadzieścia lat doświadczenia i co oferujemy naszym klientom:</p>
+        
+        <div class="benefits-list">
+          <div class="benefit-item">
+            <div class="benefit-check">✓</div>
+            <div class="benefit-content">
+              <h4>Perfekcja w Księgowości</h4>
+              <p>Polityka zero błędów z skrupulatną uwagą na szczegóły w każdej transakcji i zapisie.</p>
+            </div>
+          </div>
+          
+          <div class="benefit-item">
+            <div class="benefit-check">✓</div>
+            <div class="benefit-content">
+              <h4>Profesjonalna Obsługa Klienta</h4>
+              <p>Komfortowa obsługa zarówno online, jak i stacjonarna, dostosowana do Twojego preferowanego stylu komunikacji.</p>
+            </div>
+          </div>
+          
+          <div class="benefit-item">
+            <div class="benefit-check">✓</div>
+            <div class="benefit-content">
+              <h4>Stała Dostępność</h4>
+              <p>Telefon główny zawsze dostępny z elastycznymi godzinami pracy i konsultacjami weekendowymi w razie potrzeby.</p>
+            </div>
+          </div>
+          
+          <div class="benefit-item">
+            <div class="benefit-check">✓</div>
+            <div class="benefit-content">
+              <h4>Rozwiązanie Kompleksowe</h4>
+              <p>Pełne usługi obejmujące ubezpieczenia, finanse, dotacje, bankowość, księgowość i sprawy podatkowe.</p>
+            </div>
+          </div>
+        </div>Była Dyrektor Ekonomiczny
+        
+        <div class="satisfaction-guarantee">
+          <div class="guarantee-badge">
+            <i class="fas fa-award"></i>
+          </div>
+          <div class="guarantee-text">
+            <h4>100% Gwarancja Zadowolenia</h4>
+            <p>Naszą misją jest zadowolenie klienta, potwierdzone przez ponad sto firm, którymi obecnie z sukcesem zarządzamy.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="choose-visual">
+        <div class="stats-showcase">
+          <div class="stat-circle" data-percentage="100">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Client Satisfaction</div>
+          </div>
+          
+          <div class="stat-circle" data-percentage="25">
+            <div class="stat-number">25+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          
+          <div class="stat-circle" data-percentage="100">
+            <div class="stat-number">100+</div>
+            <div class="stat-label">Aktywnych Klientów</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact CTA -->
+<section class="about-cta">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Gotowy na Doświadczenie Różnicy MKM?</h2>
+      <p>Dołącz do ponad 100 zadowolonych klientów, którzy powierzają nam swoje potrzeby księgowe. Porozmawiajmy o tym, jak możemy pomóc Twojej firmie prosperować.</p>
+      
+      <div class="cta-buttons">
+        <a href="Contact.html" class="btn-primary">
+          <span>Uzyskaj Bezpłatną Konsultację</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="tel:+48664767930" class="btn-secondary">
+          <i class="fas fa-phone"></i>
+          <span>Zadzwoń: +48 664 767 930</span>
+        </a>
+      </div>
+      
+      <div class="cta-features">
+        <div class="feature">
+          <i class="fas fa-calendar-check"></i>
+          <span>Bezpłatna Konsultacja Wstępna</span>
+        </div>
+        <div class="feature">
+          <i class="fas fa-clock"></i>
+          <span>Wsparcie 24/7 Dostępne</span>
+        </div>
+        <div class="feature">
+          <i class="fas fa-shield-alt"></i>
+          <span>Pełnie Ubezpieczona Usługa</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Include Footer -->
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+</script>
+<div id="footer-placeholder"></div>
+
+<!-- Scripts - Load asynchronously for better performance -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      { pageLanguage: 'en', includedLanguages: 'en,pl', autoDisplay: false },
+      'google_translate_element'
+    );
+  }
+</script>
+
+<script async type="text/javascript" 
+  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+
+<script async src="mobile-navigation.js"></script>
+
+<!-- About Page Specific Scripts - Load after DOM -->
+<script>
+// Optimized loading - wait for DOM to be ready
+document.addEventListener('DOMContentLoaded', function() {
+    // Animated counters for statistics
+    function animateCounters() {
+        const counters = document.querySelectorAll('.stat-number');
+        
+        counters.forEach(counter => {
+            const target = parseInt(counter.textContent.replace(/[^0-9]/g, ''));
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                
+                if (counter.textContent.includes('%')) {
+                    counter.textContent = Math.floor(current) + '%';
+                } else if (counter.textContent.includes('+')) {
+                    counter.textContent = Math.floor(current) + '+';
+                } else {
+                    counter.textContent = Math.floor(current);
+                }
+            }, 16);
+        });
+    }
+
+    // Intersection Observer for animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                
+                // Trigger counter animation for stats
+                if (entry.target.classList.contains('stats-showcase')) {
+                    animateCounters();
+                }
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements for animation
+    const animatedElements = document.querySelectorAll('.value-card, .benefit-item, .stats-showcase, .timeline-item');
+    animatedElements.forEach(el => observer.observe(el));
+});
+</script>
+
+</body>
+</html>

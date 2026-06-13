@@ -1,0 +1,29 @@
+# Dependencies
+/vendor/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Logs and runtime dumps
+*.log
+form_debug.log
+
+# Local credential test helpers (do not publish)
+smtp-test.php
+auth-test.php
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Build/cache artifacts
+*.cache
+*.tmp
+
+# Local web server artifacts
+xampp_error.log
+php_error.log

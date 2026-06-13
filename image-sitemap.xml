@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage with Logo -->
+  <url>
+    <loc>https://biurorachunkowenysa.com/</loc>
+    <image:image>
+      <image:loc>https://biurorachunkowenysa.com/image/mkm-logo.png</image:loc>
+      <image:caption>MKM Biuro Rachunkowe - Logo firmy księgowej w Nysie</image:caption>
+      <image:title>MKM Biuro Rachunkowe Logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://biurorachunkowenysa.com/image/logo.svg</image:loc>
+      <image:caption>MKM Biuro Rachunkowe - Logo SVG</image:caption>
+      <image:title>MKM Biuro Rachunkowe Logo SVG</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Contact Page -->
+  <url>
+    <loc>https://biurorachunkowenysa.com/Contact</loc>
+    <image:image>
+      <image:loc>https://biurorachunkowenysa.com/image/mkm-logo.png</image:loc>
+      <image:caption>MKM Biuro Rachunkowe - Kontakt z biurem rachunkowym w Nysie</image:caption>
+      <image:title>MKM Biuro Rachunkowe Logo</image:title>
+    </image:image>
+  </url>
+  
+  <!-- About Us Page -->
+  <url>
+    <loc>https://biurorachunkowenysa.com/aboutus</loc>
+    <image:image>
+      <image:loc>https://biurorachunkowenysa.com/image/mkm-logo.png</image:loc>
+      <image:caption>MKM Biuro Rachunkowe - O nas, historia firmy księgowej</image:caption>
+      <image:title>MKM Biuro Rachunkowe Logo</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Business Services -->
+  <url>
+    <loc>https://biurorachunkowenysa.com/Business</loc>
+    <image:image>
+      <image:loc>https://biurorachunkowenysa.com/image/mkm-logo.png</image:loc>
+      <image:caption>MKM Biuro Rachunkowe - Usługi rejestracji działalności</image:caption>
+      <image:title>MKM Biuro Rachunkowe Logo</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Bookkeeping Services -->
+  <url>
+    <loc>https://biurorachunkowenysa.com/Book</loc>
+    <image:image>
+      <image:loc>https://biurorachunkowenysa.com/image/mkm-logo.png</image:loc>
+      <image:caption>MKM Biuro Rachunkowe - Usługi księgowe i księga handlowa</image:caption>
+      <image:title>MKM Biuro Rachunkowe Logo</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Expenses Management -->
+  <url>
+    <loc>https://biurorachunkowenysa.com/expenses</loc>
+    <image:image>
+      <image:loc>https://biurorachunkowenysa.com/image/mkm-logo.png</image:loc>
+      <image:caption>MKM Biuro Rachunkowe - Księga podatkowa przychodów i kosztów</image:caption>
+      <image:title>MKM Biuro Rachunkowe Logo</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Tax Services -->
+  <url>
+    <loc>https://biurorachunkowenysa.com/tax</loc>
+    <image:image>
+      <image:loc>https://biurorachunkowenysa.com/image/mkm-logo.png</image:loc>
+      <image:caption>MKM Biuro Rachunkowe - Usługi podatkowe i ryczałt</image:caption>
+      <image:title>MKM Biuro Rachunkowe Logo</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Payroll Services -->
+  <url>
+    <loc>https://biurorachunkowenysa.com/payroll</loc>
+    <image:image>
+      <image:loc>https://biurorachunkowenysa.com/image/mkm-logo.png</image:loc>
+      <image:caption>MKM Biuro Rachunkowe - Usługi kadrowo-płacowe</image:caption>
+      <image:title>MKM Biuro Rachunkowe Logo</image:title>
+    </image:image>
+  </url>
+
+</urlset>

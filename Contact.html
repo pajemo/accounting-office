@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Biuro Rachunkowe MKM</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Skontaktuj się z MKM Biuro Rachunkowe w Nysie. Tel: +48 664 767 930. Profesjonalne usługi księgowe z 25+ letnim doświadczeniem." />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://biurorachunkowenysa.com/Contact" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="image/favicon.png?v=1">
+    
+    <!-- Organization Schema with Logo -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "MKM Biuro Rachunkowe",
+      "url": "https://biurorachunkowenysa.com",
+      "logo": "https://biurorachunkowenysa.com/image/mkm-logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+48664767930",
+        "contactType": "customer service",
+        "email": "malgorzatakrzyzowska@wp.pl"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ul. Grunwaldzka 1",
+        "addressLocality": "Nysa",
+        "addressRegion": "Opolskie",
+        "postalCode": "48-300",
+        "addressCountry": "PL"
+      }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mobile-responsive.css">
+    <link rel="stylesheet" href="modern-header.css">
+    <link rel="stylesheet" href="contact-modern.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <!-- reCAPTCHA v3 -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdMNwIsAAAAALI4IW36xTJFipeHGwVf3z4Bnfbx"></script>
+</head>
+<body>
+
+<!-- Include Header -->
+<script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-placeholder').innerHTML = data;
+    });
+</script>
+<div id="header-placeholder"></div>
+
+<!-- Contact Hero Section -->
+<section class="contact-hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Skontaktuj się z Nami</h1>
+      <p>Gotowy na transformację finansów swojej firmy? Zacznijmy rozmowę.</p>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-card">
+        <i class="fas fa-phone-alt"></i>
+        <h3>Szybka Odpowiedź</h3>
+        <p>W ciągu 24 godzin</p>
+      </div>
+      <div class="stat-card">
+        <i class="fas fa-users"></i>
+        <h3>Zespół Ekspertów</h3>
+        <p>25+ lat doświadczenia</p>
+      </div>
+      <div class="stat-card">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Bezpieczne i Poufne</h3>
+        <p>Twoje dane są chronione</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Main Section -->
+<section class="contact-main">
+  <div class="contact-container">
+    <!-- Contact Information Cards -->
+    <div class="contact-cards">
+      <div class="contact-card">
+        <div class="card-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <div class="card-content">
+          <h3>Odwiedź Nasze Biuro</h3>
+          <p>Nysa, ul. Grunwaldzka 1</p>
+          <span>Poniedziałek - Piątek: 9:00 - 18:00</span>
+        </div>
+      </div>
+      
+      <div class="contact-card">
+        <div class="card-icon">
+          <i class="fas fa-phone"></i>
+        </div>
+        <div class="card-content">
+          <h3>Zadzwoń do Nas</h3>
+          <p>+48 664767930</p>
+          <span>Dostępny w godzinach pracy</span>
+        </div>
+      </div>
+      
+      <div class="contact-card">
+        <div class="card-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <div class="card-content">
+          <h3>Napisz do Nas</h3>
+          <p style="font-size: 0.9rem; color: #860a0a; font-weight: 500; margin: 0.5rem 0;">malgorzatakrzyzowska@wp.pl</p>
+          <span>Odpowiemy w ciągu 24 godzin</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="contact-form-section">
+      <div class="form-header">
+        <h2>Wyślij Nam Wiadomość</h2>
+        <p>Masz pytanie lub potrzebujesz profesjonalnych usług księgowych? Wypełnij formularz poniżej, a my skontaktujemy się z Tobą niezwłocznie.</p>
+      </div>
+      
+      <form class="modern-contact-form" id="secureContactForm" action="mailer.php" method="POST">
+        <!-- Security: Hidden honeypot field to catch bots -->
+        <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
+        
+        <!-- Security: CSRF Token -->
+        <input type="hidden" name="csrf_token" id="csrf_token" value="">
+        
+        <!-- Security: reCAPTCHA v3 token -->
+        <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+        
+        <!-- Security: Rate limiting identifier -->
+        <input type="hidden" name="form_timestamp" id="form_timestamp" value="">
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">Imię <span style="color: #e53e3e;">*</span></label>
+            <input type="text" id="firstName" name="firstName" required maxlength="50" pattern="[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż\s]{2,50}">
+          </div>
+          <div class="form-group">
+            <label for="lastName">Nazwisko <span style="color: #e53e3e;">*</span></label>
+            <input type="text" id="lastName" name="lastName" required maxlength="50" pattern="[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż\s]{2,50}">
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Adres Email <span style="color: #e53e3e;">*</span></label>
+            <input type="email" id="email" name="email" required maxlength="100">
+          </div>
+          <div class="form-group">
+            <label for="phone">Numer Telefonu</label>
+            <input type="tel" id="phone" name="phone" maxlength="20" pattern="[\+]?[0-9\s\-\(\)]{9,20}">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="service">Zainteresowanie Usługą</label>
+          <select id="service" name="service">
+            <option value="">Wybierz usługę...</option>
+            <option value="business-registration">Rejestracja Działalności</option>
+            <option value="tax-book">Księga Podatkowa Przychodów i Kosztów</option>
+            <option value="commercial-book">Księga Handlowa</option>
+            <option value="flat-rate-tax">Ryczałt od Przychodów</option>
+            <option value="payroll">Kadry i Płace</option>
+            <option value="consultation">Konsultacja Ogólna</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Wiadomość <span style="color: #e53e3e;">*</span></label>
+          <textarea id="message" name="message" rows="6" required maxlength="1000" placeholder="Opowiedz nam o swoich potrzebach księgowych..."></textarea>
+          <small style="color: #666; font-size: 0.8rem;">Maksymalnie 1000 znaków</small>
+        </div>
+        
+        <!-- Security Notice -->
+        <div style="background: #f8f9fa; padding: 0.75rem; border-radius: 8px; border-left: 4px solid #b10a21; margin: 1rem 0; font-size: 0.85rem;">
+          <p style="margin: 0; color: #666;">
+            <i class="fas fa-shield-alt" style="color: #b10a21; margin-right: 0.5rem;"></i>
+            Twoje dane są chronione i będą używane wyłącznie do kontaktu w sprawie Twojego zapytania.
+          </p>
+        </div>
+        
+        <div class="form-actions">
+          <button type="submit" class="submit-btn" id="submitBtn">
+            <span>Wyślij Wiadomość</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Contact CTA Section -->
+<section class="contact-cta">
+  <div class="cta-content">
+    <h2>Gotowy do Rozpoczęcia?</h2>
+    <p>Dołącz do ponad 100+ zadowolonych klientów, którzy powierzają nam swój sukces finansowy.</p>
+    <div class="cta-buttons">
+      <a href="tel:+48664767930" class="cta-btn primary">
+        <i class="fas fa-phone"></i>
+        Zadzwoń Teraz
+      </a>
+      <a href="mailto:malgorzatakrzyzowska@wp.pl" class="cta-btn secondary">
+        <i class="fas fa-envelope"></i>
+        Wyślij Email
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Include Footer -->
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+</script>
+<div id="footer-placeholder"></div>
+
+<!-- Scripts -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      { pageLanguage: 'en', includedLanguages: 'en,pl', autoDisplay: false },
+      'google_translate_element'
+    );
+  }
+</script>
+
+<script type="text/javascript" 
+  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+
+<script src="mobile-navigation.js"></script>
+
+<!-- Contact Form Enhancement Script with Security -->
+<script>
+// Security: Generate CSRF token
+function generateCSRFToken() {
+    return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+}
+
+// Security: Rate limiting check
+let lastSubmissionTime = 0;
+const minSubmissionInterval = 30000; // 30 seconds between submissions
+let loadingMessageTimeout; // For extended loading feedback
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('#secureContactForm');
+    const submitBtn = document.querySelector('#submitBtn');
+    
+    // Set CSRF token and timestamp
+    document.getElementById('csrf_token').value = generateCSRFToken();
+    document.getElementById('form_timestamp').value = Date.now();
+    
+    // Initialize reCAPTCHA v3
+    grecaptcha.ready(function() {
+        grecaptcha.execute('6LdMNwIsAAAAALI4IW36xTJFipeHGwVf3z4Bnfbx', {action: 'contact_form'}).then(function(token) {
+            document.getElementById('g-recaptcha-response').value = token;
+        });
+    });
+    
+    // Form submission handling with security checks
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Security: Check rate limiting
+        const currentTime = Date.now();
+        if (currentTime - lastSubmissionTime < minSubmissionInterval) {
+            showError('Proszę poczekać 30 sekund przed ponownym wysłaniem formularza.');
+            return;
+        }
+        
+        // Security: Validate honeypot field
+        if (form.querySelector('input[name="website"]').value !== '') {
+            showError('Wykryto podejrzaną aktywność. Formularz został zablokowany.');
+            return;
+        }
+        
+        // Security: Basic input validation
+        if (!validateInputs()) {
+            return;
+        }
+        
+        // Add loading state
+        submitBtn.innerHTML = '<span>Wysyłanie emaila...</span><i class="fas fa-spinner fa-spin"></i>';
+        submitBtn.disabled = true;
+        
+        // Update message after 10 seconds if still processing
+        const loadingMessageTimeout = setTimeout(() => {
+            if (submitBtn.disabled) {
+                submitBtn.innerHTML = '<span>Przetwarzanie... Proszę czekać</span><i class="fas fa-clock"></i>';
+            }
+        }, 10000);
+        
+        // Get fresh reCAPTCHA token before submission
+        grecaptcha.execute('6LdMNwIsAAAAALI4IW36xTJFipeHGwVf3z4Bnfbx', {action: 'contact_form'}).then(function(token) {
+            document.getElementById('g-recaptcha-response').value = token;
+            
+            // Get form data
+            const formData = new FormData(form);
+            
+            // Send to PHP handler with extended timeout for email processing
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 second timeout for email processing
+            
+            fetch('mailer.php', {
+                method: 'POST',
+                body: formData,
+                signal: controller.signal,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+            .then(response => {
+                clearTimeout(timeoutId);
+                clearTimeout(loadingMessageTimeout);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.success) {
+                    // Success state
+                    lastSubmissionTime = currentTime;
+                    form.classList.add('form-submitted');
+                    submitBtn.innerHTML = '<span>Wiadomość Wysłana!</span><i class="fas fa-check"></i>';
+                    submitBtn.style.background = '#48bb78';
+                    
+                    // Show success message
+                    showSuccess(data.message || 'Wiadomość została wysłana pomyślnie!');
+                    
+                    // Show redirect message
+                    setTimeout(() => {
+                        showSuccess('Przekierowanie do strony głównej za 3 sekundy...');
+                    }, 2000);
+                    
+                    // Redirect to home page after 5 seconds
+                    setTimeout(() => {
+                        window.location.href = './';
+                    }, 5000);
+                    
+                    // Reset form after redirect (cleanup)
+                    setTimeout(() => {
+                        form.reset();
+                        form.classList.remove('form-submitted');
+                        submitBtn.innerHTML = '<span>Wyślij Wiadomość</span><i class="fas fa-paper-plane"></i>';
+                        submitBtn.style.background = '';
+                        submitBtn.disabled = false;
+                        
+                        // Generate new CSRF token
+                        document.getElementById('csrf_token').value = generateCSRFToken();
+                        document.getElementById('form_timestamp').value = Date.now();
+                    }, 6000);
+                } else {
+                    // Error state
+                    showError(data.error || 'Błąd podczas wysyłania wiadomości.');
+                    resetSubmitButton();
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                if (error.name === 'AbortError') {
+                    showError('Przekroczono limit czasu. Spróbuj ponownie.');
+                } else {
+                    showError('Błąd połączenia. Sprawdź internet i spróbuj ponownie.');
+                }
+                resetSubmitButton();
+            });
+        });
+    });
+    
+    // Security: Input validation function
+    function validateInputs() {
+        const firstName = document.getElementById('firstName').value.trim();
+        const lastName = document.getElementById('lastName').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        
+        // Check for minimum lengths
+        if (firstName.length < 2) {
+            showError('Imię musi mieć co najmniej 2 znaki.');
+            return false;
+        }
+        
+        if (lastName.length < 2) {
+            showError('Nazwisko musi mieć co najmniej 2 znaki.');
+            return false;
+        }
+        
+        if (message.length < 10) {
+            showError('Wiadomość musi mieć co najmniej 10 znaków.');
+            return false;
+        }
+        
+        if (message.length > 1000) {
+            showError('Wiadomość nie może przekraczać 1000 znaków.');
+            return false;
+        }
+        
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            showError('Proszę wprowadzić prawidłowy adres email.');
+            return false;
+        }
+        
+        // Phone validation (if provided)
+        if (phone && phone.length > 0) {
+            const phoneRegex = /^[\+]?[0-9\s\-\(\)]{9,20}$/;
+            if (!phoneRegex.test(phone)) {
+                showError('Proszę wprowadzić prawidłowy numer telefonu.');
+                return false;
+            }
+        }
+        
+        // Security: Check for suspicious patterns
+        const suspiciousPatterns = [
+            /<script/i, /javascript:/i, /vbscript:/i, /onload=/i, /onerror=/i,
+            /eval\(/i, /expression\(/i, /document\./i, /window\./i
+        ];
+        
+        const allInputs = firstName + lastName + email + message + phone;
+        for (let pattern of suspiciousPatterns) {
+            if (pattern.test(allInputs)) {
+                showError('Wykryto niedozwolone znaki w formularzu.');
+                return false;
+            }
+        }
+        
+        return true;
+    }
+    
+    function resetSubmitButton() {
+        clearTimeout(loadingMessageTimeout);
+        submitBtn.innerHTML = '<span>Wyślij Wiadomość</span><i class="fas fa-paper-plane"></i>';
+        submitBtn.style.background = '';
+        submitBtn.disabled = false;
+    }
+    
+    function showSuccess(message) {
+        showMessage(message, 'success');
+    }
+    
+    function showError(message) {
+        showMessage(message, 'error');
+    }
+    
+    function showMessage(message, type) {
+        // Remove existing messages
+        const existingMessages = document.querySelectorAll('.form-message');
+        existingMessages.forEach(msg => msg.remove());
+        
+        // Create new message
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `form-message alert-${type}`;
+        messageDiv.style.cssText = `
+            padding: 0.75rem 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            border: none;
+            ${type === 'success' 
+                ? 'background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%); color: #155724; border-left: 4px solid #28a745;'
+                : 'background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%); color: #721c24; border-left: 4px solid #dc3545;'
+            }
+        `;
+        messageDiv.innerHTML = `<i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-triangle'}"></i> ${message}`;
+        
+        // Insert before form
+        form.parentNode.insertBefore(messageDiv, form);
+        
+        // Auto-remove after 5 seconds
+        setTimeout(() => {
+            if (messageDiv.parentNode) {
+                messageDiv.remove();
+            }
+        }, 5000);
+    }
+    
+    // Real-time input validation with security checks
+    const inputs = form.querySelectorAll('input[required], textarea[required]');
+    inputs.forEach(input => {
+        input.addEventListener('blur', validateField);
+        input.addEventListener('input', function() {
+            clearError(this);
+            // Security: Limit input length in real-time
+            if (this.value.length > parseInt(this.getAttribute('maxlength') || 1000)) {
+                this.value = this.value.substring(0, parseInt(this.getAttribute('maxlength') || 1000));
+            }
+        });
+    });
+    
+    function validateField(e) {
+        const field = e.target;
+        const value = field.value.trim();
+        
+        // Remove existing error styling
+        field.classList.remove('error');
+        
+        // Validate based on field type
+        if (!value) {
+            showFieldError(field, 'To pole jest wymagane');
+        } else if (field.type === 'email' && !isValidEmail(value)) {
+            showFieldError(field, 'Proszę wprowadzić prawidłowy adres email');
+        } else if (field.name === 'message' && value.length < 10) {
+            showFieldError(field, 'Wiadomość musi mieć co najmniej 10 znaków');
+        }
+    }
+    
+    function clearError(field) {
+        field.classList.remove('error');
+        const errorMsg = field.parentNode.querySelector('.error-message');
+        if (errorMsg) {
+            errorMsg.remove();
+        }
+    }
+    
+    function showFieldError(field, message) {
+        field.classList.add('error');
+        
+        // Remove existing error message
+        const existingError = field.parentNode.querySelector('.error-message');
+        if (existingError) {
+            existingError.remove();
+        }
+        
+        // Add error message
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'error-message';
+        errorDiv.style.cssText = 'color: #e53e3e; font-size: 0.8rem; margin-top: 0.5rem; font-weight: 500;';
+        errorDiv.textContent = message;
+        field.parentNode.appendChild(errorDiv);
+    }
+    
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+    
+    // Security: Prevent multiple rapid clicks
+    let isSubmitting = false;
+    submitBtn.addEventListener('click', function(e) {
+        if (isSubmitting) {
+            e.preventDefault();
+            return false;
+        }
+        isSubmitting = true;
+        setTimeout(() => {
+            isSubmitting = false;
+        }, 2000);
+    });
+    
+    // Add entrance animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+    
+    // Observe elements for animation
+    document.querySelectorAll('.contact-card, .contact-form-section').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+});
+</script>
+
+<style>
+/* Additional form validation styles - Site Theme */
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+    border-color: #e53e3e;
+    background-color: #fed7d7;
+}
+
+.error-message {
+    color: #e53e3e;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    text-align: left;
+}
+
+.form-group input.error:focus,
+.form-group select.error:focus,
+.form-group textarea.error:focus {
+    box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
+}
+
+/* Success state styling */
+.submit-btn.success {
+    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%) !important;
+}
+
+/* Loading state styling */
+.submit-btn.loading {
+    background: linear-gradient(135deg, #666 0%, #888 100%) !important;
+}
+
+/* Center alignment utilities */
+.text-center {
+    text-align: center !important;
+}
+
+.mx-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+</style>
+
+</body>
+</html>
